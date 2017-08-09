@@ -1,0 +1,121 @@
+header h1.logo {
+  maring: 0;
+  float: left;
+  position: relative;
+}
+
+header h1.logo img {
+  maring: 0;
+  width: 145px;
+  top: -14px;
+  left: -24px;
+  position: absolute;
+}
+
+p {
+  font-size: 0.9em;
+  margin: 0 0 1.2em 0;  
+}
+
+
+h1,
+.replica-h1 {
+  margin-bottom: .25em;
+  margin-right: 1em;
+  /* prevents run-on to next column */
+  line-height: 1.4;
+  font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-size: 28px;
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+
+@media only screen and (max-width: 767px) {
+  h1 {
+    margin-right: 0;
+    /* full-width */
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+
+  h1 {
+    font-size: 28px;
+    font-size: 2.8rem;
+  }
+}
+
+
+h2,
+.replica-h2 {
+  line-height: 1.4;
+  font-weight: 600;
+  font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+h3,
+.replica-h3 {
+  line-height: 1.4;
+  font-weight: 700;
+  font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+h4,
+.replica-h4 {
+  line-height: 1.2;
+  font-weight: 400;
+  color: #333;
+  font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+h5,
+.replica-h5 {
+  margin: .3em 0 1.5em 0;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+h6,
+.replica-h6 {
+  line-height: 1.4;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+.side-hd {
+  line-height: 1.4;
+  font-weight: bold;
+  font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-size: 10px;
+  font-size: 1rem;  
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  margin: 0 0 1.5em 0;
+}
+
+.categories {
+  margin: .3em 0 1.5em 0;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.red-head {
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $red-deep;
+  color: $white;
+}
+

@@ -1,0 +1,57 @@
+
+[class^="promo"] {
+	background-color: $red-deep;
+	overflow-y: hidden;
+	color: $white;
+	margin-bottom: 1em;
+}
+
+[class^="promo"] a,
+[class^="promo"] p
+[class^="promo"] h3,
+[class^="promo"] h4 {
+	color: $white;
+}
+
+[class^="promo"] .text {
+	padding: 2.5%;
+	display: block;
+}
+
+.promo-tile .text {
+	padding-top: 0;
+}
+
+.promo-box .text {
+	float: left;
+	padding: 2.5%;
+	width: 45%;
+	display: block;
+	clear: right;
+}
+
+.promo-tile img {
+	width: 100%;
+}
+
+.promo-box img {
+	float: left;
+	width: 50%;
+	display: block;
+}
+
+
+
+
+.email-sign-up {
+	background: url(../images/diagonal-lines.gif);
+	padding: 3em 0 4em 0;
+	text-align: center;
+	margin: 0 0 4em 0;
+}
+
+
+
+.recent-posts li {
+	margin-bottom: 1em;
+}

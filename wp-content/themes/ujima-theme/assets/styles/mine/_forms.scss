@@ -1,0 +1,28 @@
+
+input.text {
+	font-size: 1.3em;
+	padding: .5em;
+	width: 75%;
+	display: inline-block;
+}
+
+select {
+	font-size: 1.3em;
+	padding: .55em .5em .5em .5em;
+	width: 43%;
+	display: inline-block;
+	-webkit-appearance:none;
+	border-color: $grey-tint;
+	background-color: $white;
+	background: url(../img/arrow-down.png) 97% 50% no-repeat;
+}
+
+input.submit {
+	font-size: 1.4em;
+	padding: .5em;
+	display: inline-block;
+	background-color: $red-deep;
+	border: 0;
+	vertical-align: top;
+	color: $white;
+}

@@ -1,0 +1,185 @@
+
+.tool-bar {
+	background-color: $grey-dark;
+}
+
+.tool-bar-nav {
+	text-align: right;
+}
+
+.tool-bar-nav-links { 
+	float: right; 
+	margin-left: 1em;
+}
+
+header .social-icons {
+	float: right;
+}
+
+
+.tool-bar-nav a.tool-bar-link { 
+	text-transform: uppercase;
+	font-weight: bold;
+	color: $white; 
+	line-height: 2.5;
+	height: 2.4em;
+	display: block;
+	float: right;
+	padding: 1em 1.25em 1em 1.25em;
+	position: relative;
+	border-right: 1px solid $grey-mid;
+}
+
+
+.tool-bar-nav a:hover { 
+	background-color: $red-deep; 
+}
+
+.tool-bar-nav a.tool-bar-link-icon {
+	padding-left: 3.4em;
+}
+
+.tool-bar-nav a .icon-large {
+  font-size: 2em;
+  top: .45em;
+  left: .4em;
+  position: absolute;
+}
+
+
+
+.circle {
+	width: 2.5em; 
+	height:2.5em;
+	-webkit-border-radius: 1.25em;
+	-moz-border-radius: 1.25em;
+	border-radius: 1.25em;
+	background-color: $grey-mid;
+	display: inline-block;
+	text-align: center;
+	margin: 1em .75em 0 0;
+}
+
+.circle span { 
+	margin-top: .45em;
+	display: inline-block;
+	font-size: 1.25em;
+	color: #a4a4a4;
+}
+
+.circle:hover span {
+	color: $white;
+}
+
+
+@media only screen and (max-width: 741px) {
+	.circle {
+		margin: .5em 0 1em .5em;
+	}
+
+	.tool-bar-nav a.tool-bar-link-icon { 
+		padding-left: 2.4em;
+	}
+}
+
+
+
+
+
+
+.main-nav {
+	min-height: 3.2em;
+	position: relative;	
+}
+
+.main-nav ul {
+	margin: 1.5em 0;
+	float: right;
+	list-style: none;
+}
+
+.main-nav li {
+	text-transform: uppercase;
+	font-weight: bold;
+	display: inline-block;
+	list-style: none;
+	margin: 0 0 0 1.75em;
+}
+
+
+
+
+
+
+
+.sidr {
+  display: none;
+  position: absolute;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  z-index: 999999;
+  width: 260px;
+  overflow-x: inherit;
+  overflow-y: auto;
+  background: #ccddf6;
+  color: #333;
+}
+
+.sidr .sidr-inner {
+  padding: 0.5em 1em;
+}
+
+.sidr.right {
+  left: auto;
+  right: -260px;
+}
+
+.sidr.left {
+  left: -260px;
+  right: auto;
+}
+
+
+
+
+
+/**********************************/
+/* Start Sidr mobile menu trigger */
+.icon-menu {
+  display: none;
+}
+
+.icon-menu:after,
+.icon-menu:before {
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 741px) {
+  a.icon-menu,
+  a.icon-menu:link,
+  a.icon-menu:visited {
+    display: block;
+    color: #a10200;
+    padding: 0.3em 0.5em 0.5em 0.5em;
+    top: 0;
+    right: 0;
+    margin: 0 0.25em 0 -0.5em;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-size: 2.2rem;
+    position: absolute;
+  }
+
+  a.icon-menu:active,
+  a.icon-menu:hover {
+    color: #c00;
+  }
+}
+
+
+@media only screen and (max-width: 741px) {
+	.main-nav ul {
+	  display: none;
+	}
+}

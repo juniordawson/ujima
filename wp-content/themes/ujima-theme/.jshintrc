@@ -11,5 +11,6 @@
   "newcap": true,
   "noarg": true,
   "node": true,
-  "strict": false
+  "strict": false,
+  "validthis": true
 }

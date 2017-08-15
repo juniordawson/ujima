@@ -130,11 +130,11 @@ sub {
 
 a { 
   text-decoration: none; 
-  color: #a10300;
+  color: $red-mid;
 }
 
 a:hover { 
-  color: #222;
+  color: $grey-dark;
 }
 
 [class^="promo"] a:hover {
@@ -144,3 +144,5 @@ a:hover {
 img {
   width: 100%;
 }
+
+

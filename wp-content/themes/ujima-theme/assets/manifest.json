@@ -20,8 +20,17 @@
     "pop-up.js": {
       "files": [
         "scripts/pop-up.js"
-      ],
-      "main": true
+      ]
+    },
+    "show-w-js.js": {
+      "files": [
+        "scripts/show-w-js.js"
+      ]
+    },
+    "tabs.js": {
+      "files": [
+        "scripts/tabs.js"
+      ]
     },
     "jquery.js": {
       "bower": ["jquery"]

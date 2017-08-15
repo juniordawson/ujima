@@ -40,9 +40,6 @@
 	display: block;
 }
 
-
-
-
 .email-sign-up {
 	background: url(../images/diagonal-lines.gif);
 	padding: 3em 0 4em 0;
@@ -54,4 +51,132 @@
 
 .recent-posts li {
 	margin-bottom: 1em;
+}
+
+
+// Tabs
+
+.js-on .tabs-panel { 
+	display: inline-block;
+	position: relative;
+	width: 100%;
+}
+
+.js-on .individual-tab { 
+	float: left; 
+}
+
+.tabs-panel .tab {
+	font-size: 1.2em;
+	border-top: 1px solid $grey-mid;
+	margin-top: 0;
+}
+
+.js-on .tab { 
+	width: auto;
+	border: 1px solid transparent; 
+	border-bottom-color: $grey-mid;
+	background-color: $grey-tint;
+    color: $red-mid;
+	display: block;
+	padding: 0.5em 0.75em; 
+	margin: 0 0.5em 0 0; 
+	position: relative; 
+	bottom: -1px; 
+	z-index: 4; 
+	cursor: pointer;
+}
+
+
+.js-on aside .tab { 
+}
+
+@media only screen and (max-width:767px) {
+	.js-on aside .tab { 
+	}	
+}
+
+
+
+.tabs-panel .individual-tab:last-of-type .tab { 
+	margin-right: 0;
+}
+
+.js-on .tab-on .tab { 
+	color: $black;
+	border-color: $grey-mid;
+	border-bottom-color: $white;
+	background-color: $white;
+}
+
+// .js-on .individual-tab:first-of-type .tab { margin-left: 0; }
+
+.js-on .tab-content { 
+	left: 0;
+	position: absolute; 
+	border: 1px solid $grey-mid; 
+	width: 100%;
+    @include box-sizing;
+	margin-bottom: 2em;
+	display: none; 
+	padding: 0.8em;
+}
+
+.js-on aside .tab-content { 
+	margin-bottom: 0;
+}
+
+
+
+.js-on .tab-content-padding { margin: 0.75em; }
+
+.js-on .tab-on .tab-content { display: block; }
+
+
+.js-on [class^="tabs-multi-"] .tab,
+.js-on [class^="tabs-multi-"] .tab-on .tab,
+.js-on [class*=" tabs-multi-"] .tab,
+.js-on [class*=" tabs-multi-"] .tab-on .tab { 
+	border-color: $grey-mid;
+}
+
+.js-on [class^="tabs-multi-"] .tab-content,
+.js-on [class*=" tabs-multi-"] .tab-content { 
+	border: 0; 
+	width: 100%;
+}
+
+.js-on [class^="tabs-multi-"] .tab-content-padding,
+.js-on [class*=" tabs-multi-"] .tab-content-padding {
+	margin: 0;
+}
+
+.tabs-multi-2-lines { 
+	margin-bottom: 5em !important; 
+}
+
+.tabs-multi-3-lines { 
+	margin-bottom: 7em !important; 
+}
+
+.tabs-multi-4-lines { 
+	margin-bottom: 9em !important; 
+}
+
+
+[class^="tabs-multi-"] .tab,
+[class*=" tabs-multi-"] .tab { 
+	margin-bottom: .75em; 
+}
+
+.tabs-multi-2-lines .tab-content { 
+	top: 7.25em; 
+}
+
+.tabs-multi-3-lines .tab-content { 
+	top: 10.25em; 
+}
+
+.tabs-multi-4-lines .tab-content { 
+	top: 13.25em; 
 }

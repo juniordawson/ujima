@@ -162,7 +162,8 @@ function master_schedule($atts) {
 			}
 		}
 		
-		$output .= '<ul class="master-list">';
+		$output .= '<div class="show-w-js">';
+		$output .= '<ul class="master-list tabs-panel">';
 		
 		foreach($flip as $day => $hours) {
 			
@@ -171,9 +172,9 @@ function master_schedule($atts) {
 				continue;
 			}
 			
-			$output .= '<li class="master-list-day" id="list-header-'.strtolower($day).'">';
-			$output .= '<span class="master-list-day-name">'.__($day, 'radio-station').'</span>';
-			$output .= '<ul class="master-list-day-'.strtolower($day).'-list">';
+			$output .= '<li class="master-list-day individual-tab" id="list-header-'.strtolower($day).'">';
+			$output .= '<span class="master-list-day-name tab">'.__($day, 'radio-station').'</span>';
+			$output .= '<ul class="master-list-day-'.strtolower($day).'-list  tab-content">';
 			foreach($hours as $hour => $mins) {
 				
 				foreach($mins as $min => $show) {
@@ -260,6 +261,7 @@ function master_schedule($atts) {
 		}
 		
 		$output .= '</ul>';
+		$output .= '</div>';
 	}
 	elseif($list == 'divs') {
 		

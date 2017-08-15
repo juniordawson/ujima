@@ -2,8 +2,8 @@
 	<div class="grid-2-3">
 		<div class="col-2-3">
 			<div class="promo-box">
-				<a href="">
-					<img src="/ujima/wp-content/themes/ujima-theme/dist/images/radio-live-img.jpg" class="">
+				<a href="http://www.ujimaradio.com/radio-popup-player/popup-in-header.html" class="pop-up-link">
+					<img src="/dev2017/wp-content/themes/ujima-theme/dist/images/radio-live-img.jpg" class="">
 				</a>
 				
 				<div class="text">
@@ -25,14 +25,14 @@
 'show_all_sched' > Displays all schedules for a show if it airs on multiple days. Valid values are 0 for current schedule, 1 for all schedules. Default is 0.
 'show_desc' > Displays the first 20 words of the show's description. Valid values are 0 for hide descripion, 1 for show description. Default is 0.
 -->
-					<p><a href="">Open Pop-Up Player »</a></p>
+					<p><a href="http://www.ujimaradio.com/radio-popup-player/popup-in-header.html" class="pop-up-link">Open Pop-Up Player »</a></p>
 				</div>
 			</div>
 		</div>
 		<div class="col-1-3">
 			<div class="promo-tile">
-				<a href="/ujima/schedule/">
-					<img src="/ujima/wp-content/themes/ujima-theme/dist/images/schedule.jpg" alt="">
+				<a href="/dev2017/schedule/">
+					<img src="/dev2017/wp-content/themes/ujima-theme/dist/images/schedule.jpg" alt="">
 					<div class="text">	
 						<h4>Radio show schedule</h4>
 					</div>
@@ -40,8 +40,8 @@
 			</div>
 
 			<div class="promo-tile">
-				<a href="/ujima/shows/">
-					<img src="/ujima/wp-content/themes/ujima-theme/dist/images/records.jpg" alt="">
+				<a href="http://listen-again.ujimaradio.com/">
+					<img src="/dev2017/wp-content/themes/ujima-theme/dist/images/records.jpg" alt="">
 					<div class="text">	
 						<h4>Listen again: show archives</h4>
 					</div>

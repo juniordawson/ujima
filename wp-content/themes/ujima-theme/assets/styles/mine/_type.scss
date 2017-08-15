@@ -116,6 +116,13 @@ h6,
   text-transform: uppercase;
   text-align: center;
   background-color: $red-deep;
+  padding: .8em .5em;
   color: $white;
+  letter-spacing: 0.15em;
+  display: block;
+}
+
+.white-text {
+  color: $white;  
 }
 

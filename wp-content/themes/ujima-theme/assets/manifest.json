@@ -17,6 +17,12 @@
         "scripts/customizer.js"
       ]
     },
+    "pop-up.js": {
+      "files": [
+        "scripts/pop-up.js"
+      ],
+      "main": true
+    },
     "jquery.js": {
       "bower": ["jquery"]
     }

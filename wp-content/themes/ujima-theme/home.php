@@ -24,6 +24,8 @@
 
 <?php get_template_part('templates/email-sign-up-full-w'); ?>
 
+<?php get_template_part('templates/home-page-social-media-modules'); ?>
+
 
 
 

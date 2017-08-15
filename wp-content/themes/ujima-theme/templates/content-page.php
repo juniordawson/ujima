@@ -1,6 +1,7 @@
 <div class="wrapper mt-2">
 	<div class="grid-2-3">
 		<div class="col-2-3">
+ 			<?php get_template_part('templates/page', 'header'); ?>
 			<?php the_content(); ?>
 			<?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
 		</div>

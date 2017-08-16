@@ -48,10 +48,10 @@ if ( empty($withcomments) && !is_single() ) {
 <body <?php body_class(); ?>>
 <div id="page">
 
-<div id="header" role="banner">
+<!--div id="header" role="banner">
 	<div id="headerimg">
 		<h1><a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a></h1>
 		<div class="description"><?php bloginfo('description'); ?></div>
 	</div>
 </div>
-<hr />
+<hr /-->

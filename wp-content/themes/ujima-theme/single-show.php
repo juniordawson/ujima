@@ -1,9 +1,4 @@
-<?php
-/**
- * The Template for displaying all single playlist posts.  Based on TwentyEleven.
- */
 
-get_header(); ?>
 	<div class="wrapper">
 		<div class="grid-2-3">
 			<div class="col-2-3">
@@ -63,7 +58,7 @@ get_header(); ?>
 							?>
 							</div>
 						
-							<div class="station-genres alignright">
+							<!--div class="station-genres alignright">
 								<h3><?php _e('Genre', 'radio-station'); ?>:</h3>
 								<?php
 									//use this function instead if you would like the genres to link to an archive page 
@@ -77,13 +72,13 @@ get_header(); ?>
 									}
 								?>
 								</ul>
-							</div>
+							</div-->
 						
 							<?php the_content(); ?>
 						
-							<div class="station-broadcast-file">
+							<!--div class="station-broadcast-file">
 								<a href="<?php echo get_post_meta(get_the_ID(), 'show_file', true); ?>"><?php _e('Most recent broadcast', 'radio-station'); ?></a>
-							</div>
+							</div-->
 						
 							<div class="station-show-schedules">
 								<h3><?php _e('Schedule', 'radio-station'); ?></h3>
@@ -129,12 +124,12 @@ get_header(); ?>
 									</ul>
 							</div>
 						
-							<div class="station-show-playlists">
+							<!--div class="station-show-playlists">
 								<h3><?php _e('Playlists', 'radio-station'); ?></h3>
 								<?php echo do_shortcode('[get-playlists show="'.get_the_ID().'" limit="5"]'); ?>
-							</div>
+							</div-->
 						
-							<?php echo myplaylist_get_posts_for_show(get_the_ID(), __('Blog Posts', 'radio-station'), '10'); ?>
+							<!-- <?php echo myplaylist_get_posts_for_show(get_the_ID(), __('Blog Posts', 'radio-station'), '10'); ?> -->
 						 
 							<!-- /custom show output -->
 						
@@ -148,5 +143,3 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #primary -->
 	</div><!-- #wrapper -->
-
-<?php get_footer(); ?>

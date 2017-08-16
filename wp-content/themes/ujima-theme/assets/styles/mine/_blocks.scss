@@ -68,14 +68,14 @@
 
 .tabs-panel .tab {
 	font-size: 1.2em;
-	border-top: 1px solid $grey-mid;
+	border-top: 1px solid $grey-tint;
 	margin-top: 0;
 }
 
 .js-on .tab { 
 	width: auto;
 	border: 1px solid transparent; 
-	border-bottom-color: $grey-mid;
+	border-bottom-color: $grey-tint;
 	background-color: $grey-tint;
     color: $red-mid;
 	display: block;
@@ -104,7 +104,7 @@
 
 .js-on .tab-on .tab { 
 	color: $black;
-	border-color: $grey-mid;
+	border-color: $grey-tint;
 	border-bottom-color: $white;
 	background-color: $white;
 }
@@ -114,7 +114,7 @@
 .js-on .tab-content { 
 	left: 0;
 	position: absolute; 
-	border: 1px solid $grey-mid; 
+	border: 1px solid $grey-tint; 
 	width: 100%;
     @include box-sizing;
 	margin-bottom: 2em;
@@ -137,7 +137,7 @@
 .js-on [class^="tabs-multi-"] .tab-on .tab,
 .js-on [class*=" tabs-multi-"] .tab,
 .js-on [class*=" tabs-multi-"] .tab-on .tab { 
-	border-color: $grey-mid;
+	border-color: $grey-tint;
 }
 
 .js-on [class^="tabs-multi-"] .tab-content,

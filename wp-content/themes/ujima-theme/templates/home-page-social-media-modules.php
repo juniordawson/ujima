@@ -1,13 +1,13 @@
 <div class="cf">
 	<div class="wrapper">
 			<div class="thirds">
-				<a href="" class="red-head replica-h4 letters-spaced">Twitter <b>@Ujimaradio</b></a>
+				<a href="http://www.twitter.com/ujimaradio" class="red-head replica-h4 letters-spaced">Twitter <b>@Ujimaradio</b></a>
 				<div class="pad-05">
 					<?php echo do_shortcode('[custom-twitter-feeds]'); ?>
 				</div>
 			</div>
 			<div class="thirds">
-				<a href="" class="red-head replica-h4 letters-spaced">Facebook <b>/Ujimaradio</b></a>
+				<a href="https://www.facebook.com/UjimaRadio98fm" class="red-head replica-h4 letters-spaced">Facebook <b>/Ujimaradio</b></a>
 				<div class="pad-05">
 					<?php echo do_shortcode('[custom-facebook-feed]'); ?>
 				</div>

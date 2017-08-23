@@ -141,5 +141,11 @@
 
 				</div><!-- #content -->
 			</div><!-- #content -->
+			<div class="col-1-3">
+				<div class="recent-posts">
+					<?php dynamic_sidebar('sidebar-primary'); ?>
+				</div>
+			</div>
+		
 		</div><!-- #primary -->
 	</div><!-- #wrapper -->

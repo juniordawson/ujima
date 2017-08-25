@@ -1,7 +1,7 @@
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
 		<?php if( get_field('main_image') ): ?>
-			<img src="<?php the_field('main_image'); ?>" class="mb-3" />
+			<img src="<?php the_field('main_image'); ?>" class="mb-1" />
 		<?php endif; ?>
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 		<?php get_template_part('templates/entry-meta'); ?>
@@ -14,7 +14,7 @@
           <?php get_template_part('templates/social-links'); ?>
         </div>
         <div class="w-50 ta-r pt-2">
-         	<a href="" class="btn btn-boxed">Return to posts</a>
+         	<a href="<?php $cat = get_the_category(); $cat = $cat[0]; echo get_category_link($cat->cat_ID); ?>" class="btn btn-boxed">Return to posts</a>
          </div> 
         
 	<!--footer>
@@ -24,9 +24,3 @@
   </article>
 <?php endwhile; ?>
 
-
-
-
-	  
-	  
-	  

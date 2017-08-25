@@ -1,0 +1,45 @@
+
+
+.advps-slide-field-three > a:first-of-type {
+  z-index: 20 !important;
+}
+
+
+.advps-slide .advps-slide-field-three .tint-bg {
+  text-align: center !important;
+  width: 100% !important;
+ /* height: 555px !important; */
+  display: block !important;
+  position: absolute !important;
+  top: 0;
+  bottom: 0;
+  background: url(../images/trans.png);
+}
+
+
+.advps-slide .advps-excerpt-three {
+  position: absolute !important;
+  top: 220px !important; 
+  margin-left: -130px !important; 
+  left: 50%; 
+  z-index: 50 !important;
+  text-align: center;
+  width: 30%;
+}
+
+.advps-slide .advps-excerpt-three .read-more {
+  display: none;
+}
+
+
+#advps_container3 #bx-pager a img,
+#advps_container3 #bx-pager a:hover img, 
+#advps_container3 #bx-pager a.active img {
+  border: 0 !important;
+  padding: 0 !important;
+}
+
+
+.slide-thumbnail {
+  margin: 0 2%;
+}

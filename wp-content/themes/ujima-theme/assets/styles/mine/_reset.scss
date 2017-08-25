@@ -92,7 +92,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #f7f7f7;
+  border-top: 1px solid $grey-tint;
   margin: 1em 0;
   padding: 0;
 }
@@ -149,3 +149,8 @@ time {
   display: block;
   margin-bottom: 0.5em;
 }
+
+
+
+
+

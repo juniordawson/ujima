@@ -55,6 +55,39 @@ a.btn-boxed:hover {
     color: $white;
 }
 
+.btn-outline,
+.btn-outline:visited,
+a.btn-outline,
+a.btn-outline:visited {
+    padding: .8em 1em 0 1em;
+    min-height: 30px;
+    min-height: 3rem;
+    font-size: 10px;
+    font-size: 1rem;
+    color: $white;
+    background-color: transparent;
+    border-color: $white;
+    border: 1px solid;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn-outline:active,
+.btn-outline:focus,
+.btn-outline:hover,
+a.btn-outline:active,
+a.btn-outline:focus,
+a.btn-outline:hover {
+    color: $grey-dark;
+    background-color: $grey-tint;
+    border-color: $white;
+}
+
+.btn-outline [class*=" icon-"],
+.btn-outline [class^=icon-] {
+    color: $white;
+}
+
 
 
 

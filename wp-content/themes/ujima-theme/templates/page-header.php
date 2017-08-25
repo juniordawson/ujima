@@ -1,3 +1,3 @@
 <?php use Roots\Sage\Titles; ?>
 
-<h1><?= Titles\title(); ?></h1>
+<h2><?= Titles\title(); ?></h2>

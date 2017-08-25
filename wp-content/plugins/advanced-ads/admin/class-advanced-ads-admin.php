@@ -88,7 +88,8 @@ class Advanced_Ads_Admin {
 		$plugin = Advanced_Ads::get_instance();
 		$this->plugin_slug = $plugin->get_plugin_slug();
 		
-
+		add_action( 'current_screen', array( $this, 'current_screen' ) );
+		
 		// Load admin style sheet and JavaScript.
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_styles' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_scripts' ), 9 );
@@ -98,12 +99,7 @@ class Advanced_Ads_Admin {
 		
 		// check for update logic
 		add_action( 'admin_notices', array($this, 'admin_notices') );
-		
-
-		// set 1 column layout on overview page as user and page option
-		add_filter( 'screen_layout_columns', array('Advanced_Ads_Overview_Widgets_Callbacks', 'one_column_overview_page') );
-		add_filter( 'get_user_option_screen_layout_toplevel_page_advanced', array( 'Advanced_Ads_Overview_Widgets_Callbacks', 'one_column_overview_page_user') );
-		
+				
 		// add links to plugin page
 		add_filter( 'plugin_action_links_' . ADVADS_BASE, array( $this, 'add_plugin_links' ) );
 		
@@ -145,6 +141,25 @@ class Advanced_Ads_Admin {
 
 		return self::$instance;
 	}
+	
+	/**
+	 * general stuff after page is loaded and screen variable is available
+	 */
+	public function current_screen(){
+		$screen = get_current_screen();
+		
+		if( !isset( $screen->id ) ){
+			return;
+		}
+		
+		switch( $screen->id ){
+			case 'edit-advanced_ads' : // ad overview page
+			case 'advanced_ads' : // ad edit page
+			    // remove notice about missing first ad
+			    Advanced_Ads_Admin_Notices::get_instance()->remove_from_queue( 'nl_intro' );
+			    break;
+		}
+	}	
 
 	/**
 	 * Register and enqueue admin-specific style sheet.

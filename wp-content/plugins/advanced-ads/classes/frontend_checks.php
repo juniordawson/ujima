@@ -42,7 +42,8 @@ class Advanced_Ads_Frontend_Checks {
 
 		// check if jQuery is loaded in the header
 		// Hidden, will be shown using js.
-		$wp_admin_bar->add_node( array(
+		// message removed after we fixed all issues we know of
+		/*$wp_admin_bar->add_node( array(
 			'parent' => 'advanced_ads_ad_health',
 			'id'    => 'advanced_ads_ad_health_jquery',
 			'title' => __( 'jQuery not in header', 'advanced-ads' ),
@@ -51,15 +52,16 @@ class Advanced_Ads_Frontend_Checks {
 				'class' => 'hidden advanced_ads_ad_health_warning',
 				'target' => '_blank'
 			)
-		) );
+		) );*/
 		
 		// check if AdSense loads QuickStart ads
 		// Hidden, will be shown using js.
+		$utm_source = isset( $_SERVER['HTTP_HOST'] ) ? urlencode( $_SERVER['HTTP_HOST'] ) : 'advanced-ads';
 		$wp_admin_bar->add_node( array(
 			'parent' => 'advanced_ads_ad_health',
 			'id'    => 'advanced_ads_quickstart_displayed',
 			'title' => __( 'Random AdSense ads', 'advanced-ads' ),
-			'href'  => ADVADS_URL . 'adsense-in-random-positions/#utm_source=advanced-ads&utm_medium=link&utm_campaign=frontend-quickstart-ads',
+			'href'  => ADVADS_URL . 'adsense-in-random-positions/#utm_source='. $utm_source .'&utm_medium=link&utm_campaign=frontend-quickstart-ads',
 			'meta'   => array(
 				'class' => 'hidden advanced_ads_ad_health_warning',
 				'target' => '_blank'
@@ -236,11 +238,12 @@ class Advanced_Ads_Frontend_Checks {
 	 */
 	public function footer_checks() { ?>
 		<!--noptimize--><style>.hidden { display: none; } .advads-adminbar-is-warnings { background: #a54811 ! important; color: #fff !important; }
+		#wp-admin-bar-advanced_ads_ad_health-default a:after { content: "\25BA"; margin-left: .5em; font-size: smaller; }
 		.advanced-ads-highlight-ads { outline:4px solid blue !important; }</style>
 		<script type="text/javascript" src="<?php echo ADVADS_BASE_URL . 'admin/assets/js/advertisement.js' ?>"></script>
 		<script>
 		(function(d, w) {
-				var not_head_jQuery = typeof jQuery === 'undefined';
+				// var not_head_jQuery = typeof jQuery === 'undefined';
 
 				var addEvent = function( obj, type, fn ) {
 					if ( obj.addEventListener )
@@ -264,9 +267,9 @@ class Advanced_Ads_Frontend_Checks {
 
 				addEvent( w, 'load', function() {
 					var adblock_item = d.getElementById( 'wp-admin-bar-advanced_ads_ad_health_adblocker_enabled' ),
-						jQuery_item = d.getElementById( 'wp-admin-bar-advanced_ads_ad_health_jquery' ),
-						fine_item = d.getElementById( 'wp-admin-bar-advanced_ads_ad_health_fine' ),
-						hide_fine = false;
+					// jQuery_item = d.getElementById( 'wp-admin-bar-advanced_ads_ad_health_jquery' ),
+					fine_item = d.getElementById( 'wp-admin-bar-advanced_ads_ad_health_fine' ),
+					hide_fine = false;
 
 					var highlight_checkbox = d.getElementById( 'advanced_ads_highlight_ads_checkbox' );
 					if ( highlight_checkbox ) {
@@ -279,11 +282,11 @@ class Advanced_Ads_Frontend_Checks {
 						hide_fine = true;
 					}
 
-					if ( jQuery_item && not_head_jQuery ) {
+					/* if ( jQuery_item && not_head_jQuery ) {
 						// show hidden item
 						jQuery_item.className = jQuery_item.className.replace( /hidden/, '' );
 						hide_fine = true;
-					}
+					}*/
 
 					if ( hide_fine && fine_item ) {
 						fine_item.className += ' hidden';

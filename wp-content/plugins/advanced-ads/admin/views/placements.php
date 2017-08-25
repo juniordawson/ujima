@@ -145,11 +145,13 @@
     <?php endforeach; ?>
                 </tbody>
             </table>
+            <div class="tablenav bottom">
             <input type="submit" id="advads-save-placements-button" class="button button-primary" value="<?php _e( 'Save Placements', 'advanced-ads' ); ?>"/>
 	    <?php wp_nonce_field( 'advads-placement', 'advads_placement', true ) ?>
 	    <button type="button" title="<?php _e( 'Create a new placement', 'advanced-ads' ); ?>" class="button-secondary" onclick="advads_toggle('.advads-placements-new-form')"><?php
 	    _e( 'New Placement', 'advanced-ads' ); ?></button>
 	    <?php do_action( 'advanced-ads-placements-list-buttons', $placements ); ?>
+	    </div>
         </form>
 	<?php do_action( 'advanced-ads-placements-list-after', $placements );
 endif;

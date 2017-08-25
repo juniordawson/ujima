@@ -27,9 +27,29 @@
         "scripts/show-w-js.js"
       ]
     },
+    "jquery-2.2.4.min.js": {
+      "files": [
+        "scripts/jquery-2.2.4.min.js"
+      ]
+    },
     "tabs.js": {
       "files": [
         "scripts/tabs.js"
+      ]
+    },
+    "advps.script.js": {
+      "files": [
+        "scripts/advps.script.js"
+      ]
+    },
+    "sidr.js": {
+      "files": [
+        "scripts/sidr.js"
+      ]
+    },
+    "advps.frnt.script.js": {
+      "files": [
+        "scripts/advps.frnt.script.js"
       ]
     },
     "jquery.js": {

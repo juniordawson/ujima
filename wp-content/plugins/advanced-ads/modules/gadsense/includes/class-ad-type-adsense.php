@@ -178,6 +178,9 @@ class Advanced_Ads_Ad_Type_Adsense extends Advanced_Ads_Ad_Type_Abstract {
 		$output = apply_filters( 'advanced-ads-gadsense-output', false, $ad, $pub_id, $content );
 		if ( $output !== false ) {
 			return $output;
+		} elseif ( advads_is_amp() ) {
+			// Prevent output on AMP pages.
+			return '';
 		}
 
 		$output = '';

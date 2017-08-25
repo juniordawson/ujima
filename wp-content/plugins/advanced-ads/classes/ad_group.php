@@ -206,6 +206,7 @@ class Advanced_Ads_Group {
 			'type' => $this->type,
 			'refresh_enabled' => ! empty( $this->options['refresh']['enabled'] ),
 		);
+		$this->ad_args['ad_label'] = 'disabled';
 
 		if( is_array( $ordered_ad_ids ) ){
 			foreach ( $ordered_ad_ids as $_ad_id ) {
@@ -541,7 +542,6 @@ class Advanced_Ads_Group {
 		// Add label.
 		$placement_state = isset( $this->ad_args['ad_label'] ) ? $this->ad_args['ad_label'] : 'default';
 		$this->label = Advanced_Ads::get_instance()->get_label( $placement_state );
-		$this->ad_args['ad_label'] = 'disabled';
 
 		// Add placement class.
 		if ( isset( $this->ad_args['output']['class'] ) && is_array( $this->ad_args['output']['class'] ) ) {

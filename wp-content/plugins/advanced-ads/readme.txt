@@ -3,8 +3,8 @@ Contributors: webzunft
 Donate link:https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5RRRCEBGN3UT2
 Tags: ads, ad, ad inserter, ad injection, ad manager, ads manager, ad widget, adrotate, adsense, advertise, advertisements, advertising, adverts, advert, amazon, banner, banners, buysellads, chitika, clickbank, dfp, doubleclick, geotarget, geolocation, geo location, google dfp, monetization, widget
 Requires at least: 4.2
-Tested up to: 4.8
-Stable tag: 1.8.3
+Tested up to: 4.8.1
+Stable tag: 1.8.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -210,6 +210,17 @@ There is no revenue share. Advanced Ads doesn’t alter your ad codes in a way t
 5. Choose from various conditions where and to whom to display your ads.
 
 == Changelog ==
+
+= 1.8.4 =
+
+* added "Taxonomy" Display Condition
+* display arrow if an Ad Health message is a link
+* removed "jQuery not in Header" warning after we fixed all known issues
+* renamed and updated add-on updater class to use SSL only
+* updated pt_BR translation
+* added Japanese translation
+* replaced "Cheatin' uh?" message with something useful if user role does not have required permissions
+* prevent output of Adsense ads on AMP pages if they are not converted to AMP-format with Responsive add-on
 
 = 1.8.3 =
 

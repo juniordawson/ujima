@@ -2,8 +2,9 @@
 <div class="page-body">
 	<div class="wrapper">
 		<div class="grid-3">
-			<?php get_template_part('templates/page', 'header'); ?>
-
+			<span class="d-b mt-2 mb-2">
+				<?php get_template_part('templates/page', 'header'); ?>
+			</span>
 			
 			<?php if (!have_posts()) : ?>
 			  <div class="alert alert-warning">

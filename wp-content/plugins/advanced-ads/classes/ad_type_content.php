@@ -84,12 +84,12 @@ class Advanced_Ads_Ad_Type_Content extends Advanced_Ads_Ad_Type_Abstract{
 	 * @since 1.0.0
 	 */
 	public function sanitize_content($content = ''){
-
+		// use WordPress core content filter
+		$content = apply_filters( 'content_save_pre', $content );
+		
 		// remove slashes from content
 		$content = wp_unslash( $content );
-
-		// use WordPress core content filter
-		return $content = apply_filters( 'content_save_pre', $content );
+		return $content;
 	}
 
 	/**

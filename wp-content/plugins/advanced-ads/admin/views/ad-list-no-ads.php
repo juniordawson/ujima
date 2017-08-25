@@ -1,6 +1,6 @@
 <div id="advads-first-ad-links">
     <h2><?php _e( 'Not many ads here yet. Get help from the following resources:', 'advanced-ads' ); ?></h2>
-    <button type="button" id="advads-first-ad-video-link" class="button-primary"><?php _e( 'Watch the “First Ad” Tutorial (Video)', 'advanced-ads'); ?></button>
+    <button type="button" id="advads-first-ad-video-link" class="button-primary"><span class="dashicons dashicons-format-video" style="line-height: inherit"></span>&nbsp;<?php _e( 'Watch the “First Ad” Tutorial (Video)', 'advanced-ads'); ?></button>
     <a href="<?php echo ADVADS_URL . '/manual/ad-templates#utm_source=advanced-ads&utm_medium=link&utm_campaign=first-ad-import'; ?>" target="_blank"><button type="button" class="button-primary"><?php _e( 'Import Ads (Link)', 'advanced-ads'); ?></button></a>
     <a href="<?php echo ADVADS_URL . '/codex/ad-placeholder#utm_source=advanced-ads&utm_medium=link&utm_campaign=first-ad-dummy'; ?>" target="_blank"><button type="button" class="button-primary"><?php _e( 'Get dummy ad content (Link)', 'advanced-ads'); ?></button></a>
     <br class="clear"/>

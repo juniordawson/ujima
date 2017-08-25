@@ -409,7 +409,7 @@ class Advanced_Ads_Admin_Licenses {
 				// add_filter( 'expiration_of_transient_' . $transient_key, array( $this, 'set_expiration_of_update_transient' ) );
 				add_filter( 'pre_update_option_' . $transient_key, array( $this, 'set_expiration_of_update_option' ) );
 				
-				new EDD_SL_Plugin_Updater( ADVADS_URL, $_add_on['path'], array(
+				new ADVADS_SL_Plugin_Updater( ADVADS_URL, $_add_on['path'], array(
 					'version' 	=> $_add_on['version'],
 					'license' 	=> $license_key,
 					'item_name' => $_add_on['name'],

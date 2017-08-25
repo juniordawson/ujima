@@ -1,7 +1,18 @@
 <!-- ?php get_template_part('templates/page', 'header'); ? -->
 
+
+
+
+
 <div class="page-body" >
 	<div class="wrapper">
+	
+		<div class="mb-2 d-ib">
+			<?php echo do_shortcode('[advps-slideshow optset="3"]'); ?>
+		</div>
+		<hr class="mb-3" />
+
+	
 		<div class="grid-3">
 			<?php if (!have_posts()) : ?>
 			  <div class="alert alert-warning">

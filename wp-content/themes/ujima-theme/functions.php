@@ -32,3 +32,12 @@ remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
 
 add_theme_support('post-formats');
+
+
+
+
+
+add_filter('carousel_slider_load_scripts', 'carousel_slider_load_scripts');
+function carousel_slider_load_scripts( $load_scripts ) {
+    return true;
+}

@@ -18,7 +18,6 @@ class Advanced_Ads_Admin_Ad_Type {
 	protected $post_type = '';
 
 	private function __construct() {
-		add_filter( 'wp', array($this, 'wp_loaded') );
 		// registering custom columns needs to work with and without DOING_AJAX
 		add_filter( 'manage_advanced_ads_posts_columns', array($this, 'ad_list_columns_head') ); // extra column
 		add_filter( 'manage_advanced_ads_posts_custom_column', array($this, 'ad_list_columns_content'), 10, 2 ); // extra column
@@ -47,6 +46,8 @@ class Advanced_Ads_Admin_Ad_Type {
 		add_filter( 'post_updated_messages', array($this, 'ad_update_messages') );
 
 		$this->post_type = constant( 'Advanced_Ads::POST_TYPE_SLUG' );
+
+		add_filter( 'gettext', array( $this, 'replace_cheating_message' ), 20, 2 );
 	}
 
 	/**
@@ -63,24 +64,6 @@ class Advanced_Ads_Admin_Ad_Type {
 		return self::$instance;
 	}
 	
-	/**
-	 * general stuff after page is loaded and screen variable is available
-	 */
-	public function wp_loaded(){
-		$screen = get_current_screen();
-		
-		if( !isset( $screen->id ) ){
-			return;
-		}
-		
-		switch( $screen->id ){
-			case 'edit-advanced_ads' : // ad edit page
-			    // remove notice about missing first ad
-			    Advanced_Ads_Admin_Notices::get_instance()->remove_from_queue( 'nl_intro' );
-			    break;
-		}
-	}
-
 	/**
 	 * add heading for extra column of ads list
 	 * remove the date column
@@ -597,6 +580,23 @@ class Advanced_Ads_Admin_Ad_Type {
 
 		libxml_use_internal_errors( $libxml_previous_state );
 		return $errors;
+	}
+
+	/**
+	 * Replace 'Cheatin&#8217; uh?' message if user role does not have required permissions.
+	 *
+	 * @param string $translation   Translated text.
+	 * @param string $text          Text to translate.
+	 * @return string $translation  Translated text.
+	 */
+	public function replace_cheating_message( $translated_text, $untranslated_text ) {
+		global $typenow;
+
+		if ( isset( $typenow ) && $untranslated_text === 'Cheatin&#8217; uh?' && $typenow === $this->post_type ) {
+			$translated_text = __( 'You don’t have access to ads. Please deactivate and re-enable Advanced Ads again to fix this.', 'advanced-ads' );
+		}
+
+		return $translated_text;
 	}
 
 }

@@ -61,11 +61,11 @@
       function tabsPanelDisp() {
         if($('.tabs-panel').length) {
 
-      //    var tabspanel = $('.tabs-panel');   commented out as jshint was blubbing
+  //        var tabspanel = $('.tabs-panel');   commented out as jshint was blubbing
 
           tabspanel.each(function(tabspanel) {
                 
-            var tabspanel = $(this);
+ //           var tabspanel = $(this);
             var tabs = tabspanel.find('.tab');
 
             var totalTabWidth = 0;
@@ -117,15 +117,18 @@
       });
 
 
-//      function selectTab () {
-//        var hash = window.location.hash,
-//            el;
+      function selectTab () {
+        console.log('day');
+        var hash = window.location.hash,
+            el;
 
 //        if (hash) el = $('.' + hash.substr(1));
         // default behavior if there is no necessary element
 //        if (!el || !el.length) return $('.js-tab-current-titles').addClass( "tab-on" );
-//        el.addClass( "tab-on" );
-//      }
+        el.addClass( "tab-on" );
+      }
+
+
 
       $(".tab").click(tabswitch);
       $('body').addClass('js-on');
@@ -133,6 +136,5 @@
       $(document).ready(tabsPanelDisp);
       $(document).ready(selectTab); // IN THAT ORDER!
       $(document).ready(getsetheight);
-      
     })(jQuery);
   }

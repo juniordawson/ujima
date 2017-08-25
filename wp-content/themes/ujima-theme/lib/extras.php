@@ -28,6 +28,14 @@ add_filter('body_class', __NAMESPACE__ . '\\body_class');
  * Clean up the_excerpt()
  */
 function excerpt_more() {
-  return ' &hellip; <a href="' . get_permalink() . '">' . __('Read more', 'sage') . '</a>';
+  return ' &hellip; <a class="read-more" href="' . get_permalink() . '">' . __('Read more', 'sage') . '</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
+
+
+
+add_filter('carousel_slider_load_scripts', 'carousel_slider_load_scripts');
+function carousel_slider_load_scripts( $load_scripts ) {
+    return true;
+}

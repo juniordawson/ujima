@@ -61,9 +61,12 @@ class Advanced_Ads_Ad_Type_Dummy extends Advanced_Ads_Ad_Type_Abstract{
 	public function prepare_output($ad){
 	    
 		$url =	    ( isset( $ad->url ) ) ? esc_url( $ad->url ) : '';
+		// get general target setting
+		$options = Advanced_Ads::get_instance()->options();
+		$target_blank =	!empty( $options['target-blank'] ) ? ' target="_blank"' : '';
 
 		ob_start();
-		if( ! defined( 'AAT_VERSION' ) && $url ){ echo '<a href="'. $url .'">'; }
+		if( ! defined( 'AAT_VERSION' ) && $url ){ echo '<a href="'. $url .'"'.$target_blank.'>'; }
 		echo '<img src="' . ADVADS_BASE_URL . '/public/assets/img/dummy.png" width="300" height="250"/>';
 		if( ! defined( 'AAT_VERSION' ) && $url ){ echo '</a>'; }
 

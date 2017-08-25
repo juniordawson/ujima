@@ -160,6 +160,15 @@ class Advanced_Ads_Admin_Settings {
 			$hook,
 			'advanced_ads_setting_section'
 		);
+		
+		// add setting fields
+		add_settings_field(
+			'link-target',
+			__('Open links in a new window', 'advanced-ads'),
+			array($this, 'render_settings_link_target_callback'),
+			$hook,
+			'advanced_ads_setting_section'
+		);		
 
 		// only for main blog
 		if ( is_main_site( get_current_blog_id() ) ) {
@@ -448,6 +457,26 @@ class Advanced_Ads_Admin_Settings {
         <?php
 	}
 
+	/**
+	 * render link-nofollow setting
+	 *
+	 * @since 1.8.4 – moved here from Tracking add-on
+	 */
+	public function render_settings_link_target_callback(){
+	    
+		// get option if saved for tracking
+		$options = Advanced_Ads::get_instance()->options();
+		if( !isset( $options['target-blank'] ) && class_exists( 'Advanced_Ads_Tracking_Plugin' ) ){
+			$tracking_options = Advanced_Ads_Tracking_Plugin::get_instance()->options();
+			if( isset( $tracking_options['target'] ) ){
+				$options['target-blank'] = $tracking_options['target'];
+			}
+		}
+	    
+		$target = isset($options['target-blank']) ? $options['target-blank'] : 0;
+		include ADVADS_BASE_PATH . 'admin/views/setting-target.php';
+	}	
+	
 	/**
 	* render setting 'Delete data on uninstall"
 	*

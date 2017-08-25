@@ -59,6 +59,10 @@ height: auto;
 	.grid-3 .col:nth-of-type(3n) {
 		margin-right: 0%;
 	}
+
+	.grid-3 .col:nth-of-type(4n) {
+		clear: left;
+	}
 }
 
 @media only screen and (min-width: 541px) and (max-width: 740px) {
@@ -68,7 +72,6 @@ height: auto;
 		margin-right: 0%;
 	} 
 
-
 	.grid-3 .col {
 		width: 46.5%;
 		margin-right: 7%;
@@ -76,6 +79,10 @@ height: auto;
 
 	.grid-3 .col:nth-of-type(2n) {
 		margin-right: 0%;
+	}
+	
+	.grid-3 .col:nth-of-type(3n) {
+		clear: left;
 	}
 }
 

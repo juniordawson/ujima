@@ -298,6 +298,8 @@ class Advanced_Ads_Admin_Notices {
 		// only update if changed
 		if( $options_before !== $options ){
 		    $this->update_options( $options );
+		    // update already registered notices
+		    $this->load_notices();
 		}
 	}
 
